@@ -174,7 +174,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "balanceOf",
+				"name": "balanceOf1",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -226,7 +226,7 @@
 						"type": "uint8"
 					}
 				],
-				"stateMutability": "view",
+				"stateMutability": "pure",
 				"type": "function"
 			},
 			{
@@ -591,11 +591,11 @@
 			]
 		},
 		"contracts/RideDaoContract.sol": {
-			"keccak256": "0xd87f605ddae58fb5aac80a7947063d5094b1a46c65364abed39e0d604e891887",
+			"keccak256": "0x9e0156ba1898015ef3f46502efa9d3891e9a1b30eae2f44e0a79688e4b52b953",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e934ab38a2f8996193461039c0925a996d4de2de251c723057cb3e7ba72c2dcc",
-				"dweb:/ipfs/QmUfFgGcom56JnV1sBaTyQcVHQfJVqdqMM3vemwcHgpMUq"
+				"bzz-raw://83b6e8d1dc57617c03cdabfe4e7013e4b3ef1ddb6424dfae34bea52719370679",
+				"dweb:/ipfs/QmfNwvz4v8CYtFYNQ2cHhjf6C15yvc9y4YszFTV7N4qJ9f"
 			]
 		}
 	},

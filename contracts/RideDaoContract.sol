@@ -8,10 +8,14 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract RideDaoContract is ERC20, ERC20Burnable, Pausable, Ownable {
     constructor() ERC20("RideDaoContract", "RIDO") {
-        _mint(msg.sender, 50000000000000000000000000 * 16 ** decimals());
+        _mint(msg.sender, 50000000000000000000000000 * 18**decimals());
     }
-mapping(address => uint256) balances;
 
+    function decimals() public pure override returns (uint8) {
+        return 16;
+    }
+
+    mapping(address => uint256) balances;
 
     address payable[] recipients;
 
@@ -32,6 +36,9 @@ mapping(address => uint256) balances;
     }
 
     function invest() external payable {
+        if (msg.value < 1 ether) {
+            revert();
+        }
         balances[msg.sender] += msg.value;
     }
 
@@ -39,12 +46,13 @@ mapping(address => uint256) balances;
         _burn(_msgSender(), amount);
     }
 
-    function balanceOf() external view returns (uint256) {
+    function balanceOf1() external view returns (uint256) {
         return address(this).balance;
     }
 
-    function transferToken(address payable recepient, uint256 _amount) external {
+    function transferToken(address payable recepient, uint256 _amount)
+        external
+    {
         recepient.transfer(_amount);
     }
-
 }

@@ -376,10 +376,10 @@
 	},
 	"sources": {
 		"RideDaoContract_flat.sol": {
-			"keccak256": "0xc2737f35acce3061c49372236555bea053dc7dd32c992e4f96ea2afe4aa2c6fe",
+			"keccak256": "0x3cded1c55ff030a4fc6df3512b1428c9f8ee2e25915f48cc73a76263e07c30e2",
 			"urls": [
-				"bzz-raw://c158a3164c9e1d0e261496940a414e7ea2d29fca38c370cd4705a4691ef46cb0",
-				"dweb:/ipfs/QmQzCPCh8p9dyJa2C9U7dxofwLSJX8CAyfac6DhWUGgrbY"
+				"bzz-raw://f6b11f72bc9d7a5b656c79fea5f6d49382269a150b30f5fead8c05396452b314",
+				"dweb:/ipfs/QmXW8VL5QLSdbQJERfMBaLZAZdG4Ztu8tkwT2jVLmawpB9"
 			]
 		}
 	},
