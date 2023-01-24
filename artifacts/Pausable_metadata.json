@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.9+commit.e5eed63a"
+		"version": "0.8.17+commit.8df45f5f"
 	},
 	"language": "Solidity",
 	"output": {
@@ -89,10 +89,11 @@
 	},
 	"sources": {
 		"RideDaoContract_flat.sol": {
-			"keccak256": "0x3cded1c55ff030a4fc6df3512b1428c9f8ee2e25915f48cc73a76263e07c30e2",
+			"keccak256": "0xd83a4af495d73a3d49f3a805a3bfd827fe75690939910c4fcaa08f087073c21a",
+			"license": "MIT",
 			"urls": [
-				"bzz-raw://f6b11f72bc9d7a5b656c79fea5f6d49382269a150b30f5fead8c05396452b314",
-				"dweb:/ipfs/QmXW8VL5QLSdbQJERfMBaLZAZdG4Ztu8tkwT2jVLmawpB9"
+				"bzz-raw://f90464e47110c1ef8982b9db8251ad999f98d95182ab95d60e45acae1449c1fb",
+				"dweb:/ipfs/QmUzAX9RpkTNJk6xiLpK2CQ6z9TpTUNViqsMN8edJfTGnT"
 			]
 		}
 	},
