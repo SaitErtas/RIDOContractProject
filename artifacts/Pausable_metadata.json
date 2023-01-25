@@ -89,11 +89,10 @@
 	},
 	"sources": {
 		"RideDaoContract_flat.sol": {
-			"keccak256": "0xd83a4af495d73a3d49f3a805a3bfd827fe75690939910c4fcaa08f087073c21a",
-			"license": "MIT",
+			"keccak256": "0x60cf4ef6d774cd41e4bd0ab719050ea4dfbfee8ccd5ba47d572bd29eabc2b53b",
 			"urls": [
-				"bzz-raw://f90464e47110c1ef8982b9db8251ad999f98d95182ab95d60e45acae1449c1fb",
-				"dweb:/ipfs/QmUzAX9RpkTNJk6xiLpK2CQ6z9TpTUNViqsMN8edJfTGnT"
+				"bzz-raw://f5631ff3e24af4f6282c2dd5f467453daf352d236a82b6ee7f11c744471bba11",
+				"dweb:/ipfs/QmY4HPtz9AvdoQU3tC3twHCDH1L7KTKxCnGp9bKv3SxQin"
 			]
 		}
 	},
