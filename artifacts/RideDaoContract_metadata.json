@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.17+commit.8df45f5f"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -709,6 +709,29 @@
 			}
 		],
 		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Paused(address)": {
+					"details": "Emitted when the pause is triggered by `account`."
+				},
+				"RoleAdminChanged(bytes32,bytes32,bytes32)": {
+					"details": "Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._"
+				},
+				"RoleGranted(bytes32,address,address)": {
+					"details": "Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}."
+				},
+				"RoleRevoked(bytes32,address,address)": {
+					"details": "Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)"
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				},
+				"Unpaused(address)": {
+					"details": "Emitted when the pause is lifted by `account`."
+				}
+			},
 			"kind": "dev",
 			"methods": {
 				"allowance(address,address)": {
@@ -784,7 +807,7 @@
 		"compilationTarget": {
 			"RideDaoContract_flat.sol": "RideDaoContract"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -797,10 +820,10 @@
 	},
 	"sources": {
 		"RideDaoContract_flat.sol": {
-			"keccak256": "0x60cf4ef6d774cd41e4bd0ab719050ea4dfbfee8ccd5ba47d572bd29eabc2b53b",
+			"keccak256": "0xa082b028c284199ce62639ab878dbe48ebbcf92c58a5b829f2e08c7f1e991453",
 			"urls": [
-				"bzz-raw://f5631ff3e24af4f6282c2dd5f467453daf352d236a82b6ee7f11c744471bba11",
-				"dweb:/ipfs/QmY4HPtz9AvdoQU3tC3twHCDH1L7KTKxCnGp9bKv3SxQin"
+				"bzz-raw://2bd198459a4ba67e5c1248b8bb8abdc1297f048a76fd5c79341997a4f005ab81",
+				"dweb:/ipfs/QmQDVhvwNaC7eB8S3jS69QSzVAaBnuhwAfMb1K6vxx1ckn"
 			]
 		}
 	},

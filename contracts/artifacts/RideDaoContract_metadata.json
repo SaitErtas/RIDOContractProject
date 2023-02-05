@@ -1,6 +1,6 @@
 {
 	"compiler": {
-		"version": "0.8.9+commit.e5eed63a"
+		"version": "0.8.18+commit.87f61d96"
 	},
 	"language": "Solidity",
 	"output": {
@@ -709,6 +709,29 @@
 			}
 		],
 		"devdoc": {
+			"events": {
+				"Approval(address,address,uint256)": {
+					"details": "Emitted when the allowance of a `spender` for an `owner` is set by a call to {approve}. `value` is the new allowance."
+				},
+				"Paused(address)": {
+					"details": "Emitted when the pause is triggered by `account`."
+				},
+				"RoleAdminChanged(bytes32,bytes32,bytes32)": {
+					"details": "Emitted when `newAdminRole` is set as ``role``'s admin role, replacing `previousAdminRole` `DEFAULT_ADMIN_ROLE` is the starting admin for all roles, despite {RoleAdminChanged} not being emitted signaling this. _Available since v3.1._"
+				},
+				"RoleGranted(bytes32,address,address)": {
+					"details": "Emitted when `account` is granted `role`. `sender` is the account that originated the contract call, an admin role bearer except when using {AccessControl-_setupRole}."
+				},
+				"RoleRevoked(bytes32,address,address)": {
+					"details": "Emitted when `account` is revoked `role`. `sender` is the account that originated the contract call:   - if using `revokeRole`, it is the admin role bearer   - if using `renounceRole`, it is the role bearer (i.e. `account`)"
+				},
+				"Transfer(address,address,uint256)": {
+					"details": "Emitted when `value` tokens are moved from one account (`from`) to another (`to`). Note that `value` may be zero."
+				},
+				"Unpaused(address)": {
+					"details": "Emitted when the pause is lifted by `account`."
+				}
+			},
 			"kind": "dev",
 			"methods": {
 				"allowance(address,address)": {
@@ -784,7 +807,7 @@
 		"compilationTarget": {
 			"contracts/RideDaoContract.sol": "RideDaoContract"
 		},
-		"evmVersion": "london",
+		"evmVersion": "paris",
 		"libraries": {},
 		"metadata": {
 			"bytecodeHash": "ipfs"
@@ -893,11 +916,11 @@
 			]
 		},
 		"contracts/RideDaoContract.sol": {
-			"keccak256": "0xe9207ffb93f891c1f0b88d09074b2b5236f9bff4ad4032f98c402d87c630f8c5",
+			"keccak256": "0xed86b1da389337be8bd719b1c02dd94d83ab51c619386385e715dc0d51da2bdf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6eee2aaec20e5a4c1d5d53b9fee4bdadce9f7836bf29905df57a600a9ce852ac",
-				"dweb:/ipfs/QmaGQ8Q2VWPEU7EXJTgee6ZdR176gBBzqUV3cND8wSAay8"
+				"bzz-raw://fc4d043cb6269dad7050e5e5efb2667db9fb809ecd229fd665f9922e465cfefb",
+				"dweb:/ipfs/QmerSUasZNZS7Zq4dya1XUwY84MYHu3zX3ULSPtG2k8CtD"
 			]
 		}
 	},

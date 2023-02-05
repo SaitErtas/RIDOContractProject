@@ -1502,7 +1502,7 @@ abstract contract ERC20Burnable is Context, ERC20 {
 // File: contracts/RideDaoContract.sol
 
 
-pragma solidity ^0.8.9;
+pragma solidity ^0.8.18;
 
 
 
@@ -1520,7 +1520,7 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
         _grantRole(PAUSER_ROLE, msg.sender);
         _grantRole(FEE_RATIO_CHANGER_ROLE, msg.sender);
 
-        _mint(msg.sender, 50000000000000000000000000 * 18**decimals());
+        _mint(msg.sender, 6000000000 * 10**decimals());
         _feeRatio = 0;
         grantRole(PAUSER_ROLE, 0x13C2870c285B2F2f5831E53700b4E5E139e73596);
         grantRole(PAUSER_ROLE, 0x668F723e961aab7089Ce61fB90989f7Bac49Bb5b);
