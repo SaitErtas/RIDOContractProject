@@ -955,11 +955,11 @@
 			]
 		},
 		"contracts/RideDaoContract.sol": {
-			"keccak256": "0xdf4cdd303c9acbf19691f29746442c99014b647ef88f03d28483f8ba7866ade8",
+			"keccak256": "0x5b932914240e4609d42a1a007bdf8322674628869ac5d66d9cd51b4eb810f446",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://591255092dd6cf79af1445739f191a19f5ce9cf5e9898c7e7f28401245d534ff",
-				"dweb:/ipfs/QmUesA9s5mVCJB9JLZ8T2R66jgjPW2rBWAo4KWaYWSDwrM"
+				"bzz-raw://81a7a946900b74fe49208d5a5149a48fc2340ed3017052a32df52d5d592e54b1",
+				"dweb:/ipfs/QmRW8c4Cmm5BWLrKjUZUrBRuE6a73wvstjkrj7Qr2oXXsC"
 			]
 		}
 	},

@@ -53,8 +53,7 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
         address to,
         uint256 amount
     ) internal override(ERC20) {
-        
-        if (hasRole(DEFAULT_ADMIN_ROLE, msg.sender)) {
+        if (!hasRole(DEFAULT_ADMIN_ROLE, msg.sender)) {
             _requireNotPaused();
         }
 
