@@ -221,7 +221,20 @@
 			},
 			{
 				"inputs": [],
-				"name": "_feeRatio",
+				"name": "_buyFeeRatio",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "_sellFeeRatio",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -387,7 +400,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getFeeRatio",
+				"name": "getBuyFeeRatio",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -412,6 +425,19 @@
 						"internalType": "bytes32",
 						"name": "",
 						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getSellFeeRatio",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -579,7 +605,20 @@
 						"type": "uint256"
 					}
 				],
-				"name": "setFeeRatio",
+				"name": "setBuyFeeRatio",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "feeRatio",
+						"type": "uint256"
+					}
+				],
+				"name": "setSellFeeRatio",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -916,11 +955,11 @@
 			]
 		},
 		"contracts/RideDaoContract.sol": {
-			"keccak256": "0xed86b1da389337be8bd719b1c02dd94d83ab51c619386385e715dc0d51da2bdf",
+			"keccak256": "0x2cb3b108a087886facac1203162483c5f90dcaaa8ef3411fa5d973e2bf31f2a1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fc4d043cb6269dad7050e5e5efb2667db9fb809ecd229fd665f9922e465cfefb",
-				"dweb:/ipfs/QmerSUasZNZS7Zq4dya1XUwY84MYHu3zX3ULSPtG2k8CtD"
+				"bzz-raw://362f0d96df6d9647f5a428453e24fc23241b67ebc59f966a0a0320aa6ad8ba40",
+				"dweb:/ipfs/QmXWQxZn2B72mymkqAeB4hCBLJStGmLEyRjyNufYhYZVLZ"
 			]
 		}
 	},

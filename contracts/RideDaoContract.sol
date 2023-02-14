@@ -11,7 +11,8 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
 
     bytes32 public FEE_RATIO_CHANGER_ROLE = keccak256("VARIABLE_CHANGER_ROLE");
 
-    uint256 public _feeRatio; //State variable
+    uint256 public _sellFeeRatio; //Sell Fee Ratio State variable
+    uint256 public _buyFeeRatio; //Sell Fee Ratio State variable
 
     constructor() ERC20("RideDao", "RIDO") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
@@ -19,7 +20,8 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
         _grantRole(FEE_RATIO_CHANGER_ROLE, msg.sender);
 
         _mint(msg.sender, 6000000000 * 10**decimals());
-        _feeRatio = 0;
+        _sellFeeRatio = 0;
+        _buyFeeRatio = 0;
         grantRole(PAUSER_ROLE, 0x13C2870c285B2F2f5831E53700b4E5E139e73596);
         grantRole(PAUSER_ROLE, 0x668F723e961aab7089Ce61fB90989f7Bac49Bb5b);
 
@@ -50,7 +52,7 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
         address from,
         address to,
         uint256 amount
-    ) internal override(ERC20) whenNotPaused {
+    ) internal override(ERC20) whenNotPaused && whenNot(DEFAULT_ADMIN_ROLE) {
         require(
             !isBlackListed(to),
             "Token transfer refused. Receiver is on the blacklist"
@@ -69,22 +71,36 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
     function transferToken(address payable recepient, uint256 _amount)
         external
     {
-        _amount -= _amount * (_feeRatio / 100);
+        _amount -= _amount * (_sellFeeRatio / 100);
         recepient.transfer(_amount);
     }
 
-    function setFeeRatio(uint256 feeRatio)
+    function setSellFeeRatio(uint256 feeRatio)
         public
         virtual
         onlyRole(FEE_RATIO_CHANGER_ROLE)
     {
         //require(_checkRole(FEE_RATIO_CHANGER_ROLE,sender.address), "Only authorized user is allowed to modify fee ration.");
 
-        _feeRatio = feeRatio;
+        _sellFeeRatio = feeRatio;
     }
 
-    function getFeeRatio() public view returns (uint256) {
-        return _feeRatio;
+    function setBuyFeeRatio(uint256 feeRatio)
+        public
+        virtual
+        onlyRole(FEE_RATIO_CHANGER_ROLE)
+    {
+        //require(_checkRole(FEE_RATIO_CHANGER_ROLE,sender.address), "Only authorized user is allowed to modify fee ration.");
+
+        _buyFeeRatio = feeRatio;
+    }
+
+    function getSellFeeRatio() public view returns (uint256) {
+        return _sellFeeRatio;
+    }
+
+    function getBuyFeeRatio() public view returns (uint256) {
+        return _buyFeeRatio;
     }
 
     function blacklistUpdate(address user, bool value)
