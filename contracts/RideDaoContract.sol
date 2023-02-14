@@ -52,7 +52,12 @@ contract RideDaoContract is ERC20, ERC20Burnable, Pausable, AccessControl {
         address from,
         address to,
         uint256 amount
-    ) internal override(ERC20) whenNotPaused && whenNot(DEFAULT_ADMIN_ROLE) {
+    ) internal override(ERC20) {
+        
+        if (hasRole(DEFAULT_ADMIN_ROLE, msg.sender)) {
+            _requireNotPaused();
+        }
+
         require(
             !isBlackListed(to),
             "Token transfer refused. Receiver is on the blacklist"
